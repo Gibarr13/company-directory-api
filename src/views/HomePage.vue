@@ -3,7 +3,7 @@ import { onMounted } from 'vue'
 //const title = ref('Hello There ✋')
 import MainCards from '@/components/MainCards.vue';
 import MainPagination from '@/components/MainPagination.vue';
-import useAPI from '@/composanles/useAPI';
+import useAPI from '@/composables/useAPI';
 
 const { getEmployees, loading } = useAPI()
 

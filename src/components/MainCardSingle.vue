@@ -11,7 +11,7 @@ import { faker } from '@faker-js/faker'
 const props = defineProps({
   employee: {
     type: Object,
-    require: True,
+    required: true,
     default: () => {
        return {
          _id: "672c3f4017300534bf4222be",

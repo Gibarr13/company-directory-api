@@ -11,7 +11,7 @@ import { useAuth } from './composables/useAuth'
 const {isAuthenticated} = useAuth()
 const routes = [
   { path: '/comapny-directory-api/', name: 'Home', component: HomePage },
-  { path: 'comapny-directory-api/other', name: 'Other', component: () => import('@/views/OtherPage.vue') },
+  { path: '/comapny-directory-api/other', name: 'Other', component: () => import('@/views/OtherPage.vue') },
   { path: '/comapny-directory-api/employees/:id', name: 'CardDetails', component: CardDetails },
   { path: '/comapny-directory-api/login', name: 'LoginPage', component: LoginPage },
   { path: '/comapny-directory-api/settings', name: 'SettingsPage', component: SettingsPage, meta: {requiresAuth: true} },
@@ -24,7 +24,7 @@ const router = createRouter({
 
 //navagation guard
 router.beforeEach((to, _, next) =>{
-  if (to.meta, requiresAuth && !isAuthenticated.value) {
+  if (to.meta.requiresAuth && !isAuthenticated.value) {
     next({name: 'LoginPage', query: {redirect: to.fullPath}})
   } else {
     next()
