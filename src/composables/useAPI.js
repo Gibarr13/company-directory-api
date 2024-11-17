@@ -2,7 +2,7 @@ import axios from 'axios'
 import { ref } from 'vue'
 
 const instance = axios.create({
-    baseURL: 'https://node-app-s8uf.onrender.com',
+    baseURL: 'https://node-app-s8uf.onrender.com/',
 })
 
 const employees = ref([])
@@ -21,10 +21,10 @@ export default function useAPI() {
         loading.value = false
     }
 
-    const fetchEmploye = async (id) => {
+    const fetchEmployee = async (id) => {
         const response = await instance.get(`api/employees/fetch/${id}`)
         currentEmployee.value = response.data
     }
 
-    return {instance, employees, getEmployees, loading, fetchEmploye, currentEmployee}
+    return {instance, employees, getEmployees, loading, fetchEmployee, currentEmployee}
 }

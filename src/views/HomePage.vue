@@ -7,7 +7,7 @@ import useAPI from '@/composables/useAPI';
 
 const { getEmployees, loading } = useAPI()
 
-onMounted(async () => {
+onMounted( async () => {
     await getEmployees()
 })
 

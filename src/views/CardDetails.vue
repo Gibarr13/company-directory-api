@@ -7,7 +7,7 @@ import { faker } from '@faker-js/faker'
 const {fetchEmployee, currentEmployee} = useAPI()
 
 onMounted(async () => {
-    await fetchEmployee(route.parms.id)
+    await fetchEmployee(route.params.id)
 })
 
 onUnmounted(() => {

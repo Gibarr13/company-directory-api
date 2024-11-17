@@ -34,7 +34,7 @@ const props = defineProps({
     <div class="border border-gray-400 rounded-lg shadow bg-gray-200 h-full">
       <img :src="faker.image.urlLoremFlickr({width: 640, height: 480, category: 'cats'})" class="rounded-t-xl" />
       <div class="p-4">
-          <p class="mb-2 text-2xl font-bold">{{ props.emplyee.firstName }}{{ props.employee.lastName }}</p>
+          <p class="mb-2 text-2xl font-bold">{{ props.emplyee.firstName }} {{ props.employee.lastName }}</p>
           <p class="mb-3 font-normal text-gray-700">{{ props.employee.title }}</p>
           <p class="mb-3 font-normal text-gray-700">{{ props.employee.quote }}</p>
       </div>
